@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+#userFeignClient:
+#  name: user-service
+#  url: http://localhost:8080/users
+#
+#questionFeignClient:
+#  name: question-service
+#  url: http://localhost:8080/questions
